@@ -1,0 +1,24 @@
+.body {
+    width: calc(100% - 5rem);
+    height: 100vh;
+    margin-left: 5rem;
+    z-index: 0;
+    position: relative;
+    margin-left: -0.625rem;
+    margin-top: -0.5rem;
+    top: 0;
+    transition: all .5s ease-in-out;
+    background: #2E343E;
+    padding: 3rem;
+    max-height: 100vh !important;
+}
+
+.body-trimmed {
+    width: calc(100% - 16.5625rem);
+    margin-left: 16.5625rem;
+}
+
+.body-md-screen {
+    width: calc(100% - 5rem);
+    margin-left: 5rem;
+}

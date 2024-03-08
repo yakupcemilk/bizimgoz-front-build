@@ -1,0 +1,49 @@
+<div class="sidenav" [ngClass]="collapsed ? 'sidenav-collapsed' : ''">
+    <div class="logo-container">
+        <button class="logo">
+            <img 
+            style="transition: all .5s ease;" 
+            [src]="collapsed ? '/assets/logo/logo-light.png' : '/assets/logo/logo-light-thumbnail.png'" 
+            width="auto" height="30px"/>
+        </button>
+        <button [ngClass]="collapsed ? 'toggle-btn' : 'toggle-btn-collapsed'" (click)="toggleCollapse()">
+            <i class="fal fa-arrow-right"></i>
+        </button>
+    </div>
+    
+    <div class="contain" [style.max-height]="maxHeight">
+        <ul class="sidenav-nav">
+            <li class="sidenav-nav-item" *ngFor="let data of navData">
+                <a 
+                class="sidenav-nav-link" 
+                [routerLink]="[data.routeLink]"
+                routerLinkActive="active"
+                [routerLinkActiveOptions]="{exact: true}"
+                >
+                    <i class="sidenav-link-icon" [class]="data.icon"></i>
+                    <span class="sidenav-link-text" *ngIf="collapsed"> {{ data.label }} </span>
+                    <span mat-line class="line"></span>
+                </a>
+            </li>
+        </ul>
+    </div> 
+    <div class="section" style="border-bottom: rgb(46, 52, 62) 1px solid;"></div>
+    <div class="profile">
+        <button [ngClass]="collapsed ? 'profile-btn' : 'profile-btn-collapse'" style="cursor: pointer;">JD</button>
+        <div [ngClass]="collapsed ? 'profile-texts' : 'profile-texts-hide'">
+            <span class="profile-texts-username">John Doe</span>
+            <span class="profile-texts-role">IT System Manager</span>
+        </div>
+        <i [ngClass]="collapsed ? 'fal fa-arrow-right' : 'profile-icon-hide'" style="color: white; cursor: pointer;"></i>
+    </div>
+    <div class="drowned">
+        <div class="help">
+            <i class="fal fa-question"></i>
+            <span [ngClass]="collapsed ? 'help-text' : 'help-text-hide'">Help</span>
+        </div>
+        <div class="theme">
+            <i class="fal fa-moon"></i>
+            <span [ngClass]="collapsed ? 'theme-text' : 'theme-text-hide'">Dark</span>
+        </div>
+    </div>
+</div>

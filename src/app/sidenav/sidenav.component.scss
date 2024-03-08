@@ -1,0 +1,232 @@
+.sidenav {
+    background: #23272E;
+    transition: all .5s ease;
+    position: fixed;
+    margin-left: -0.965rem !important;
+    z-index: 1;
+    top: 0;
+    width: 5rem;
+    height: 100vh;
+    font-family: 'Inter', sans-serif;
+    border-right: #798596 1px solid;
+    
+    .logo-container {
+        display: flex;
+        align-items: center;
+        padding: 0.938rem 0.938rem 0 0.938rem;
+        width: 100%;
+
+        .logo {
+            background: transparent;
+            text-align: center;
+            width: 3rem;
+            min-width: 3rem;
+            border-radius: 0.313rem;
+            padding: 0.313rem;
+            font-size: 24px;
+            font-weight: 900;
+            cursor: pointer;
+            border: none;
+        }
+
+        .toggle-btn {
+            margin-left: 11.625rem;
+            background-color: #23272E;
+            transition: all .5s ease;
+            border: #3A424D 1px solid;
+            border-radius: 100%;
+            font-size: larger;
+            color: white;
+            height: 2rem;
+            width: 2rem;
+        }
+
+        .toggle-btn-collapsed {
+            transition: all .5s ease;
+            margin-left: 0.2rem;
+            background-color: #23272E;
+            border: #3A424D 1px solid;
+            border-radius: 100%;
+            font-size: larger;
+            color: white;
+            height: 2rem;
+            width: 2rem;
+        }
+    }
+
+    .profile {
+        height: 3.5rem;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        border-bottom: #3A424D 1px solid;
+        margin-bottom: 0.625rem;
+
+        .profile-btn {
+            background: #0066FF;
+            border: none;
+            color: white;
+            font-size: x-large;
+            border-radius: 0.625rem;
+            height: 2.5rem;
+            width: auto;
+            margin-left: 12%;
+        }        
+        
+        .profile-btn-collapse {
+            background: #0066FF;
+            border: none;
+            color: white;
+            font-size: x-large;
+            border-radius: 0.625rem;
+            height: 2.5rem;
+            width: auto;
+            margin-left: 25%;
+        }
+
+        .profile-texts {
+            transition: all .5s ease-in-out;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+
+            .profile-texts-username {
+                color: white;
+                font: bold;
+                font-size: small;
+            }
+
+            .profile-texts-role {
+                color: #798596;
+                font: 300;
+                font-size: smaller;
+            }
+
+            i {
+                size: 3rem;
+                color: white;
+            }
+        }
+
+        .profile-texts-hide {
+            transition: all .5s ease;
+            display: none;
+        }
+
+        .profile-icon-hide {
+            transition: all .5s ease;
+            display: none;
+        }
+    }
+
+    .drowned {
+        height: 3rem;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+
+        .help {
+            color: white;
+            margin-bottom: 0.325rem !important;
+            font-size: larger;
+
+            i {
+                color: white;
+                margin-right: 10px;
+            }
+
+            .help-text-hide {
+                transition: all .5s ease;
+                display: none !important;
+            }
+        }
+
+        .theme {
+            color: white;
+            font-size: larger;
+
+            i {
+                color: white;
+                margin-right: 10px;
+            }
+
+            .theme-text-hide {
+                transition: all .5s ease;
+                display: none !important;
+            }
+        }
+    }
+}
+
+.sidenav-collapsed {
+    width: 16.5652rem;
+}
+
+.sidenav-nav {
+    list-style: none;
+    padding: 0.938rem;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: calc(100vh - 2rem);
+    cursor: pointer;
+
+    .sidenav-nav-item {
+        width: 100%;
+        margin-bottom: 0.025rem;
+
+        .line {
+            display: relative;
+            height: 3rem;
+            color: transparent;
+            transition: color .3s ease;
+
+            &:hover {
+                color: #1ED57D;
+            }
+        }
+
+        .sidenav-nav-link {
+            display: flex;
+            align-items: center;
+            height: 2.325rem;
+            color: white;
+            text-decoration: none;
+            transition: color .3s ease;
+            border-radius: 0.325rem;
+
+            .sidenav-link-icon {
+                font-size: 16px;
+                width: 2rem;
+                min-width: 2rem;
+                padding-left: 1.5rem;
+            }
+
+            .sidenav-link-text {
+                margin-left: 1.5rem;
+            }
+        }
+    }
+
+    .sidenav-nav-item:hover {
+        .sidenav-nav-link {
+            background-color: rgba(121, 133, 150, 0.2);
+            color: white;
+        }
+
+        .line {
+            color: white;
+        }
+    }
+}
+
+.active {
+    background-color: #22774A33;
+
+    .sidenav-link-icon,
+    .sidenav-link-text {
+        color: #1ED57D;
+    }
+}

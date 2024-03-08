@@ -1,0 +1,11 @@
+import { Component, Input } from '@angular/core';
+
+@Component({
+  selector: 'app-settings',
+  templateUrl: './settings.component.html',
+  styleUrl: './settings.component.scss'
+})
+export class SettingsComponent {
+  @Input() collapsed: boolean = false;
+
+}
